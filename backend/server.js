@@ -27,7 +27,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      https://individual-project-weld.vercel.app/
+      "https://individual-project-livid.vercel.app/"
     ],
     credentials: true,
   })
