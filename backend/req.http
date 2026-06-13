@@ -1,0 +1,160 @@
+### Register User
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+"name":"Bhavyaa",
+"email":"[bhavyaa@gmail.com](mailto:bhavyaa@gmail.com)",
+"password":"123456"
+}
+
+### Login User
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+"email":"[bhavyaa@gmail.com](mailto:bhavyaa@gmail.com)",
+"password":"123456"
+}
+
+### Get User Profile
+
+GET http://localhost:5000/api/auth/profile
+Authorization: 
+
+### Create Animal (Admin Only)
+
+POST http://localhost:5000/api/animals
+Content-Type: application/json
+Authorization: 
+
+{
+"name":"Tommy",
+"type":"Dog",
+"age":2,
+"gender":"Male",
+"image":"https://example.com/dog.jpg",
+"description":"Friendly rescued dog",
+"story":"Found near highway",
+"status":"Ready For Adoption"
+}
+
+### Get All Animals
+
+GET http://localhost:5000/api/animals
+
+### Get Animal By ID
+
+GET http://localhost:5000/api/animals/ANIMAL_ID
+
+### Search Animal
+
+GET http://localhost:5000/api/animals?search=Tommy
+
+### Filter By Type
+
+GET http://localhost:5000/api/animals?type=Dog
+
+### Filter By Status
+
+GET http://localhost:5000/api/animals?status=Ready%20For%20Adoption
+
+### Update Animal
+
+PUT http://localhost:5000/api/animals/ANIMAL_ID
+Content-Type: application/json
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+{
+"status":"Adopted"
+}
+
+### Delete Animal
+
+DELETE http://localhost:5000/api/animals/ANIMAL_ID
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+### Create Adoption Request
+
+POST http://localhost:5000/api/adoptions
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+
+{
+"animalId":"ANIMAL_ID",
+"phone":"9876543210",
+"address":"Hyderabad",
+"reason":"I love animals and can take care of them."
+}
+
+### View My Adoption Requests
+
+GET http://localhost:5000/api/adoptions/my
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### View All Adoption Requests (Admin)
+
+GET http://localhost:5000/api/adoptions
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+### Approve Adoption Request
+
+PUT http://localhost:5000/api/adoptions/REQUEST_ID
+Content-Type: application/json
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+{
+"status":"Approved"
+}
+
+### Reject Adoption Request
+
+PUT http://localhost:5000/api/adoptions/REQUEST_ID
+Content-Type: application/json
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+{
+"status":"Rejected"
+}
+
+### Create Timeline Update
+
+POST http://localhost:5000/api/updates
+Content-Type: application/json
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+{
+"animalId":"ANIMAL_ID",
+"updateText":"Animal rescued from roadside."
+}
+
+### Get Timeline Updates
+
+GET http://localhost:5000/api/updates/ANIMAL_ID
+
+### Delete Timeline Update
+
+DELETE http://localhost:5000/api/updates/UPDATE_ID
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
+
+### Add Animal To Favorites
+
+POST http://localhost:5000/api/favorites/ANIMAL_ID
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Get Favorites
+
+GET http://localhost:5000/api/favorites
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Remove Favorite
+
+DELETE http://localhost:5000/api/favorites/ANIMAL_ID
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Dashboard Statistics (Admin)
+
+GET http://localhost:5000/api/dashboard/stats
+Authorization: Bearer YOUR_ADMIN_TOKEN_HERE
