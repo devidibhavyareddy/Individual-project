@@ -85,6 +85,10 @@ npm run build
 
 VITE_API_URL=http://localhost:5000/api
 
+For deployment on Vercel, set the frontend API base URL to your Render backend:
+
+VITE_API_URL=https://individual-project-v0qs.onrender.com/api
+
 ## Routing
 Implemented using React Router with protected routes for authenticated users and administrators.
 

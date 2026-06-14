@@ -101,6 +101,10 @@ JWT_SECRET=mySuperSecretKey123
 
 VITE_API_URL=http://localhost:5000/api
 
+For deployed frontend on Vercel, use your Render backend URL in Vercel environment variables:
+
+VITE_API_URL=https://individual-project-v0qs.onrender.com/api
+
 ## API Modules
 - Authentication
 - Animals
