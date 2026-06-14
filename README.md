@@ -94,8 +94,8 @@ npm run dev
 ### Backend
 
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+MONGO_URI=mongodb://127.0.0.1:27017/pawrescue
+JWT_SECRET=mySuperSecretKey123
 
 ### Frontend
 
