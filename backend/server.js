@@ -24,10 +24,10 @@ const app = express();
   
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "individual-project-drab.vercel.app",
-    ],
+  origin: [
+  "http://localhost:5173",
+  "https://individual-project-drab.vercel.app",
+]
     credentials: true,
   })
 );
